@@ -18,6 +18,9 @@ Route::get('/', function()
 
 Route::get('/users', function()
 {
+	Log::info('mickey info');
+	Log::warning('mickey warning');
+	Log::error('mickey error');
 	$users = User::all();
 	return View::make('users')->with('users', $users);
 });
